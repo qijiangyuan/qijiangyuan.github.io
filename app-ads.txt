@@ -1,3 +1,7 @@
+google.com, pub-5457653291480990, DIRECT, f08c47fec0942fa0
+
+facebook.com, 530708832016119, RESELLER, c3e20eee3f780d68
+
 algorix.co, 54616, RESELLER, 5b394c12fea27a1d
 appads.in, 106246, RESELLER
 loopme.com, 9621, RESELLER, 6c8d5f95897a5a3b
@@ -146,4 +150,4 @@ pubmatic.com, 165438, RESELLER, 5d62403b186f2ace
 media.net, 8CUH46N56, RESELLER
 start.io, 197760873, RESELLER
 
-facebook.com, 530708832016119, RESELLER, c3e20eee3f780d68
+
