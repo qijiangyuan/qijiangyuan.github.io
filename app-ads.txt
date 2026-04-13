@@ -145,3 +145,5 @@ adyoulike.com, aff404dd1a704f379acae5190701c9c2, RESELLER
 pubmatic.com, 165438, RESELLER, 5d62403b186f2ace
 media.net, 8CUH46N56, RESELLER
 start.io, 197760873, RESELLER
+
+facebook.com, 530708832016119, RESELLER, c3e20eee3f780d68
