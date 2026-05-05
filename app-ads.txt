@@ -149,5 +149,6 @@ adyoulike.com, aff404dd1a704f379acae5190701c9c2, RESELLER
 pubmatic.com, 165438, RESELLER, 5d62403b186f2ace
 media.net, 8CUH46N56, RESELLER
 start.io, 197760873, RESELLER
-
+rubiconproject.com, 17062, RESELLER, 0bfd66d529a55807
+triplelift.com, 95054, RESELLER, 6c33edb13117fd86
 
