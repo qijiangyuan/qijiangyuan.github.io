@@ -1,4 +1,6 @@
 *
 !index.html
 !styles.css
+!assets/
+!assets/*.png
 !.gitignore
