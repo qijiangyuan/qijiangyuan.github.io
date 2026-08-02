@@ -333,13 +333,20 @@ h1 em {
 
 .hero-gallery {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+  align-content: center;
   min-height: 570px;
+  padding: 28px 4px;
 }
 
 .mini-card {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  width: min(64%, 360px);
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
   overflow: hidden;
   background: #10232d;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -350,7 +357,7 @@ h1 em {
 .mini-card img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 1.28;
   object-fit: cover;
 }
 
@@ -374,27 +381,27 @@ h1 em {
   font-weight: 500;
 }
 
-.mini-card-idle {
-  top: 0;
-  left: 0;
-  transform: rotate(-5deg);
+.mini-card-infinite {
+  transform: translateY(-10px) rotate(2.5deg);
 }
 
 .mini-card-tapventure {
-  top: 14%;
-  left: 25%;
-  z-index: 4;
-  transform: rotate(1.5deg);
+  z-index: 5;
+  transform: translateY(8px) rotate(-2deg);
 }
 
 .mini-card-tapventure img {
   object-position: center 18%;
 }
 
+.mini-card-idle {
+  z-index: 3;
+  transform: translateY(-8px) rotate(-2deg);
+}
+
 .mini-card-sea {
-  right: 0;
-  bottom: 0;
-  transform: rotate(5deg);
+  z-index: 4;
+  transform: translateY(10px) rotate(2.5deg);
 }
 
 .orbit {
@@ -476,26 +483,19 @@ h2 {
 }
 
 .game-card-idle {
-  --accent: var(--gold-bright);
+  --accent: #a9dce8;
+}
+
+.game-card-infinite {
+  --accent: #d8b8ff;
 }
 
 .game-card-tapventure {
   --accent: #ffe07d;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
-  grid-template-rows: 1fr;
   background: #392a16;
 }
 
-.game-card-tapventure .game-art {
-  min-height: 560px;
-}
-
 .game-card-tapventure .game-art img {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  aspect-ratio: auto;
   object-position: center 19%;
 }
 
@@ -734,17 +734,9 @@ h2 {
     margin: 0 auto;
   }
 
-  .mini-card {
-    width: min(54%, 360px);
-  }
-
   .section-heading,
   .studio-section {
     grid-template-columns: 1fr;
-  }
-
-  .game-card-tapventure {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
   }
 
   .section-heading {
@@ -787,29 +779,9 @@ h2 {
     min-height: 520px;
   }
 
-  .mini-card {
-    width: min(62%, 320px);
-  }
-
   .game-grid,
   .contact-section {
     grid-template-columns: 1fr;
-  }
-
-  .game-card-tapventure {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
-
-  .game-card-tapventure .game-art {
-    min-height: 0;
-  }
-
-  .game-card-tapventure .game-art img {
-    position: static;
-    height: auto;
-    aspect-ratio: 1.1;
-    object-position: center 14%;
   }
 
   .contact-section {
@@ -852,7 +824,6 @@ h2 {
   }
 
   .mini-card {
-    width: 66%;
     border-radius: 15px;
   }
 
