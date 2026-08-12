@@ -405,13 +405,16 @@ h1 em {
 }
 
 .mini-card-storage {
-  grid-column: span 2;
-  max-width: none;
   transform: translateY(-4px) rotate(-1deg);
 }
 
 .mini-card-storage img {
-  aspect-ratio: 2.64;
+  object-position: center;
+}
+
+.mini-card-cultivation {
+  z-index: 3;
+  transform: translateY(7px) rotate(1.5deg);
 }
 
 .orbit {
@@ -521,11 +524,21 @@ h2 {
   background: #182534;
 }
 
-.game-card-storage .game-art {
+.game-card-cultivation {
+  --accent: #f4d37f;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  grid-template-rows: 1fr;
+  background: #173a38;
+}
+
+.game-card-storage .game-art,
+.game-card-cultivation .game-art {
   min-height: 480px;
 }
 
-.game-card-storage .game-art img {
+.game-card-storage .game-art img,
+.game-card-cultivation .game-art img {
   position: absolute;
   inset: 0;
   height: 100%;
@@ -644,6 +657,25 @@ h2 {
 .store-link span {
   color: #16834a;
   font-size: 0.7rem;
+}
+
+.store-status {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 11px 17px;
+  color: #d7dfdc;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.store-status span {
+  color: var(--accent);
+  font-size: 0.62rem;
 }
 
 .card-link {
@@ -847,16 +879,19 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .game-card-storage {
+  .game-card-storage,
+  .game-card-cultivation {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
 
-  .game-card-storage .game-art {
+  .game-card-storage .game-art,
+  .game-card-cultivation .game-art {
     min-height: 0;
   }
 
-  .game-card-storage .game-art img {
+  .game-card-storage .game-art img,
+  .game-card-cultivation .game-art img {
     position: static;
     height: auto;
     aspect-ratio: 1.34;
